@@ -24,7 +24,7 @@ public class FortuneTeller {
 		// Favorite color, going to have to loop this
 		String colorInput;
 		do {
-			System.out.println("Enter your favorite ROYGBIV olor");
+			System.out.println("Enter your favorite ROYGBIV color");
 			System.out.println("Type \"help\" to list the ROYGBIV colors.");
 			colorInput = input.nextLine();
 			if (colorInput.equalsIgnoreCase("help")) {
@@ -35,6 +35,8 @@ public class FortuneTeller {
 		// number of siblings
 		System.out.println("Enter your number of siblings:");
 		int siblings = Integer.parseInt(input.nextLine());
+		
+		input.close();
 
 		// declaring a variable to use later when going from int to string
 		String vacationSiblings;
@@ -123,7 +125,7 @@ public class FortuneTeller {
 		} else if(colorInput.equalsIgnoreCase("violet")) {
 			carColor = "Tesla"; 	
 }
-		
+		input.close();
 System.out.println(firstName + " " + lastName + " will retire in " + retirementYears + " years, with $" + bankBalance
 				+ " in their bank account, and will have a vacation home in " + vacationSiblings + ", and will drive a " + carColor + ".");	
 	}
