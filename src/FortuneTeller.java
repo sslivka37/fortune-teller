@@ -35,7 +35,8 @@ public class FortuneTeller {
 		// number of siblings
 		System.out.println("Enter your number of siblings:");
 		int siblings = Integer.parseInt(input.nextLine());
-		
+
+		//closing the scanner so no resource leak
 		input.close();
 
 		// declaring a variable to use later when going from int to string
@@ -108,25 +109,28 @@ public class FortuneTeller {
 		} else {
 			vacationSiblings = "Denver";
 		}
-		
-		//conditionals for favorite color and car driven
+
+		// conditionals for favorite color and car driven
 		if (colorInput.equalsIgnoreCase("red")) {
 			carColor = "Mustang";
-		} else if(colorInput.equalsIgnoreCase("orange"))	 {
+		} else if (colorInput.equalsIgnoreCase("orange")) {
 			carColor = "Mercedez";
-		} else if(colorInput.equalsIgnoreCase("yellow")) {
+		} else if (colorInput.equalsIgnoreCase("yellow")) {
 			carColor = "Subaru";
-		} else if(colorInput.equalsIgnoreCase("green")) {
+		} else if (colorInput.equalsIgnoreCase("green")) {
 			carColor = "Honda";
-		} else if(colorInput.equalsIgnoreCase("blue")) {
+		} else if (colorInput.equalsIgnoreCase("blue")) {
 			carColor = "Toyota";
-		} else if(colorInput.equalsIgnoreCase("indigo")) {
+		} else if (colorInput.equalsIgnoreCase("indigo")) {
 			carColor = "scooter";
-		} else if(colorInput.equalsIgnoreCase("violet")) {
-			carColor = "Tesla"; 	
-}
-		input.close();
-System.out.println(firstName + " " + lastName + " will retire in " + retirementYears + " years, with $" + bankBalance
-				+ " in their bank account, and will have a vacation home in " + vacationSiblings + ", and will drive a " + carColor + ".");	
+		} else if (colorInput.equalsIgnoreCase("violet")) {
+			carColor = "Tesla";
+		}
+
+		
+		//final output message
+		System.out.println(firstName + " " + lastName + " will retire in " + retirementYears + " years, with $"
+				+ bankBalance + " in their bank account, and will have a vacation home in " + vacationSiblings
+				+ ", and will drive a " + carColor + ".");
 	}
 }
